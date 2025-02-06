@@ -1,0 +1,42 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .btn.delete {
+    background-color: red;
+  }
+  
+  .loading {
+    color: orange;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
