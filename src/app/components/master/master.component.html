@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Master Component</h2>
+    <div class="button-group">
+        <button 
+          (click)="changeTab('EmployeeList')" 
+          [class.active]="currentComponent === 'EmployeeList'">
+           Employee List
+        </button>
+        <button 
+          (click)="changeTab('EmployeeForm')" 
+          [class.active]="currentComponent === 'EmployeeForm'">
+          Employee Form
+        </button>   
+    </div>
+    
+    <div class="content">
+        <div *ngIf="currentComponent === 'EmployeeList'">
+            <app-employee-list></app-employee-list>
+        </div>
+        <div *ngIf="currentComponent === 'EmployeeForm'">
+            <app-employee-form></app-employee-form>
+        </div>
+    </div>
+</div>

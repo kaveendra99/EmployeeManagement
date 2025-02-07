@@ -1,1 +1,64 @@
-<p>employee-form works!</p>
+<div class="form-container">
+    <h2>{{isEditMode ? 'Edit Employee' : 'Add Employee'}}</h2>
+    <form  [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" formControlName="firstName">
+            <small *ngIf="employeeForm.controls['firstName'].invalid && employeeForm.controls['firstName'].touched">Required</small>
+
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" formControlName="lastName">
+            <small *ngIf="employeeForm.controls['lastName'].invalid && employeeForm.controls['lastName'].touched">Required</small>
+
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" formControlName="email">
+            <small *ngIf="employeeForm.controls['email'].invalid && employeeForm.controls['email'].touched">Valid Email Required</small>
+
+        </div>
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="text" formControlName="dob">
+            
+
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <select formControlName="gender">
+                <option value=" ">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+           
+        </div>
+        <div class="form-group">
+            <label>Education</label>
+            <input type="text" formControlName="education">
+            
+
+        </div>
+        <div class="form-group">
+            <label>Company</label>
+            <input type="text" formControlName="company">
+            
+
+        </div>
+        <div class="form-group">
+            <label>Experience (years)</label>
+            <input type="text" formControlName="experience">
+           
+
+        </div>
+        <div class="form-group">
+            <label>Package(salary)</label>
+            <input type="text" formControlName="package">
+            
+        </div>
+        <div>
+            <button type="submit" class="btn">{{isEditMode ? 'Update' : 'Add'}} Employee </button>
+        </div>
+    </form>
+</div>
